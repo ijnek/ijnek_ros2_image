@@ -14,6 +14,9 @@ RUN groupadd --gid $USER_GID $USERNAME \
 # Switch from root to user
 USER $USERNAME
 
+# Change directory to user home
+WORKDIR /home/$USERNAME
+
 # Install SimSpark (https://gitlab.com/robocup-sim/SimSpark/-/wikis/Installation-on-Linux#build-from-source)
 RUN sudo apt install -y g++ git make cmake libfreetype6-dev libode-dev libsdl1.2-dev ruby ruby-dev libdevil-dev libboost-dev libboost-thread-dev libboost-regex-dev libboost-system-dev qtbase5-dev qtchooser qt5-qmake
 RUN git clone https://gitlab.com/robocup-sim/SimSpark.git
