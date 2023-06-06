@@ -25,6 +25,7 @@ RUN cd SimSpark/rcssserver3d && mkdir build && cd build && cmake .. && make && s
 RUN echo -e '/usr/local/lib/simspark\n/usr/local/lib/rcssserver3d' | sudo tee /etc/ld.so.conf.d/spark.conf && sudo ldconfig
 
 # Install Webots
+RUN sudo apt install -y wget software-properties-common
 RUN wget -qO- https://cyberbotics.com/Cyberbotics.asc | sudo apt-key add -
 RUN sudo apt-add-repository 'deb https://cyberbotics.com/debian/ binary-amd64/'
 RUN sudo apt update
@@ -33,8 +34,25 @@ RUN sudo apt install webots -y
 # Clone WebotsLolaController
 RUN git clone https://github.com/Bembelbots/WebotsLoLaController.git
 
+# Install SPL GameController
+RUN sudo apt install -y ant openjdk-11-jdk
+RUN git clone https://github.com/RoboCup-SPL/GameController.git
+RUN cd GameController && ant
+
 # Rosdep update
 RUN rosdep update
 
 # Source the ROS setup file
 RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
+
+# Create workspace and change directory into it
+RUN mkdir ws
+WORKDIR /home/$USERNAME/ws
+
+# Copy the cloned repositories into container
+ARG SRC_DIR="src"
+COPY $SRC_DIR src/.
+COPY src.repos .
+
+# Install dependencies ("|| true" is required to prevent a failure return code that happens if rosdep couldn't find some binary dependencies)
+RUN rosdep install -y --from-paths src --ignore-src --rosdistro rolling -r || true

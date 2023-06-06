@@ -1,0 +1,69 @@
+repositories:
+  biped_ik_simple:
+    type: git
+    url: git@github.com:ijnek/biped_ik_simple.git
+    version: rolling
+  gz_control_hw:
+    type: git
+    url: git@github.com:ijnek/gz_control_hw
+    version: rolling
+  gz_control_hw_demo:
+    type: git
+    url: git@github.com:ijnek/gz_control_hw_demo.git
+    version: rolling
+  kaonashi:
+    type: git
+    url: git@github.com:ijnek/kaonashi.git
+    version: rolling
+  nao:
+    type: git
+    url: git@github.com:ijnek/nao.git
+    version: rolling
+  nao_button_sim:
+    type: git
+    url: git@github.com:ijnek/nao_button_sim.git
+    version: rolling
+  nao_ik:
+    type: git
+    url: git@github.com:ijnek/nao_ik.git
+    version: rolling
+  nao_interfaces:
+    type: git
+    url: git@github.com:ijnek/nao_interfaces.git
+    version: rolling
+  nao_phase_provider:
+    type: git
+    url: git@github.com:ijnek/nao_phase_provider
+    version: rolling
+  naosoccer_pos_action:
+    type: git
+    url: git@github.com:ijnek/naosoccer_pos_action
+    version: rolling
+  naosoccer_visualization:
+    type: git
+    url: git@github.com:ijnek/naosoccer_visualization
+    version: rolling
+  ros2_boldbot:
+    type: git
+    url: git@github.com:ijnek/ros2_boldbot.git
+    version: rolling
+  soccer:
+    type: git
+    url: git@github.com:ijnek/soccer.git
+    version: rolling
+  soccer_object_msgs:
+    type: git
+    url: git@github.com:ijnek/soccer_object_msgs
+    version: rolling
+  soccer_visualization:
+    type: git
+    url: git@github.com:ijnek/soccer_visualization
+    version: rolling
+  walk:
+    type: git
+    url: git@github.com:ijnek/walk.git
+    version: rolling
+  webots_nao_camera:
+    type: git
+    url: git@github.com:ijnek/webots_nao_camera
+    version: rolling
