@@ -24,6 +24,15 @@ RUN cd SimSpark/spark && mkdir build && cd build && cmake .. && make && sudo mak
 RUN cd SimSpark/rcssserver3d && mkdir build && cd build && cmake .. && make && sudo make install && sudo ldconfig
 RUN echo -e '/usr/local/lib/simspark\n/usr/local/lib/rcssserver3d' | sudo tee /etc/ld.so.conf.d/spark.conf && sudo ldconfig
 
+# Install Webots
+RUN wget -qO- https://cyberbotics.com/Cyberbotics.asc | sudo apt-key add -
+RUN sudo apt-add-repository 'deb https://cyberbotics.com/debian/ binary-amd64/'
+RUN sudo apt update
+RUN sudo apt install webots -y
+
+# Clone WebotsLolaController
+RUN git clone https://github.com/Bembelbots/WebotsLoLaController.git
+
 # Rosdep update
 RUN rosdep update
 
