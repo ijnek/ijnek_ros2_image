@@ -1,6 +1,6 @@
-# ijnek_robocup_image
+# ijnek_ros2_image
 
-This repository stores a Dockerfile (and an action to publish it), to clone all of my repos, as well as commonly used RoboCup software, including:
+This repository stores a Dockerfile (and an action to publish it), to clone all ros2 repos I maintain, as well as some software I often use including:
 
 * SimSpark (RCSSServer3d)
 * Webots (+ Webots Lola Controller)
