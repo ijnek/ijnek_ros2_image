@@ -3,6 +3,18 @@ repositories:
     type: git
     url: git@github.com:ijnek/biped_ik_simple.git
     version: rolling
+  biped_interfaces:
+    type: git
+    url: git@github.com:ros-sports/biped_interfaces.git
+    version: rolling
+  dynamixel_hardware:
+    type: git
+    url: git@github.com:dynamixel-community/dynamixel_hardware.git
+    version: rolling
+  gc_spl:
+    type: git
+    url: git@github.com:ros-sports/gc_spl.git
+    version: dev
   gz_control_hw:
     type: git
     url: git@github.com:ijnek/gz_control_hw
@@ -10,6 +22,22 @@ repositories:
   gz_control_hw_demo:
     type: git
     url: git@github.com:ijnek/gz_control_hw_demo.git
+    version: rolling
+  hlvs_player:
+    type: git
+    url: git@github.com:ros-sports/hlvs_player.git
+    version: main
+  humanoid_base_footprint:
+    type: git
+    url: git@github.com:ros-sports/humanoid_base_footprint.git
+    version: master
+  image_transport_plugins:
+    type: git
+    url: git@github.com:ros-perception/image_transport_plugins.git
+    version: rolling
+  ipm:
+    type: git
+    url: git@github.com:ros-sports/ipm.git
     version: rolling
   kaonashi:
     type: git
@@ -31,6 +59,10 @@ repositories:
     type: git
     url: git@github.com:ijnek/nao_interfaces.git
     version: rolling
+  nao_lola:
+    type: git
+    url: git@github.com:ros-sports/nao_lola.git
+    version: rolling
   nao_phase_provider:
     type: git
     url: git@github.com:ijnek/nao_phase_provider
@@ -43,21 +75,65 @@ repositories:
     type: git
     url: git@github.com:ijnek/naosoccer_visualization
     version: rolling
+  r2r_spl:
+    type: git
+    url: git@github.com:ros-sports/r2r_spl.git
+    version: dev
+  rcss3d_agent:
+    type: git
+    url: git@github.com:ros-sports/rcss3d_agent.git
+    version: rolling
+  rcss3d_nao:
+    type: git
+    url: git@github.com:ros-sports/rcss3d_nao.git
+    version: rolling
   ros2_boldbot:
     type: git
     url: git@github.com:ijnek/ros2_boldbot.git
+    version: rolling
+  ros_image_to_qimage:
+    type: git
+    url: git@github.com:ros-sports/ros_image_to_qimage.git
+    version: rolling
+  rqt_image_overlay:
+    type: git
+    url: git@github.com:ros-sports/rqt_image_overlay.git
     version: rolling
   soccer:
     type: git
     url: git@github.com:ijnek/soccer.git
     version: rolling
+  soccer_interfaces:
+    type: git
+    url: git@github.com:ros-sports/soccer_interfaces.git
+    version: rolling
+  soccer_ipm:
+    type: git
+    url: git@github.com:ros-sports/soccer_ipm.git
+    version: rolling
   soccer_object_msgs:
     type: git
     url: git@github.com:ijnek/soccer_object_msgs
     version: rolling
+  soccer_vision_2d_layers:
+    type: git
+    url: git@github.com:ros-sports/soccer_vision_2d_layers.git
+    version: rolling
+  soccer_vision_3d_rviz_markers:
+    type: git
+    url: git@github.com:ros-sports/soccer_vision_3d_rviz_markers.git
+    version: rolling
   soccer_visualization:
     type: git
     url: git@github.com:ijnek/soccer_visualization
+    version: rolling
+  vision_msgs_layers:
+    type: git
+    url: git@github.com:ros-sports/vision_msgs_layers.git
+    version: rolling
+  vision_opencv:
+    type: git
+    url: git@github.com:ros-perception/vision_opencv.git
     version: rolling
   walk:
     type: git
@@ -67,3 +143,7 @@ repositories:
     type: git
     url: git@github.com:ijnek/webots_nao_camera
     version: rolling
+  zbar_ros:
+    type: git
+    url: git@github.com:ros-drivers/zbar_ros.git
+    version: ros2
