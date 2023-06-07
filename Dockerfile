@@ -1,4 +1,7 @@
-FROM osrf/ros:rolling-desktop
+FROM osrf/ros:rolling-desktop-full
+
+# Prevent apt install from asking questions during build process
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Add vscode user with same UID and GID as your host system
 # (copied from https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user#_creating-a-nonroot-user)
