@@ -55,9 +55,10 @@ RUN mkdir ws
 WORKDIR /home/$USERNAME/ws
 
 # Copy the cloned repositories into container
-ARG SRC_DIR="src"
-COPY $SRC_DIR src/.
-COPY --chown=$USERNAME:$USERNAME $SRC_DIR src/.
+COPY --chown=$USERNAME:$USERNAME src src/.
 
 # Install dependencies ("|| true" is required to prevent a failure return code that happens if rosdep couldn't find some binary dependencies)
 RUN rosdep install -y --from-paths src --ignore-src --rosdistro rolling -r || true
+
+# Copy the colcon defaults file
+COPY --chown=$USERNAME:$USERNAME colcon/defaults.yaml /home/$USERNAME/.colcon/.
