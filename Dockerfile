@@ -55,7 +55,7 @@ WORKDIR /home/$USERNAME/ws
 # Copy the cloned repositories into container
 ARG SRC_DIR="src"
 COPY $SRC_DIR src/.
-COPY src.repos .
+COPY --chown=$USERNAME:$USERNAME $SRC_DIR src/.
 
 # Install dependencies ("|| true" is required to prevent a failure return code that happens if rosdep couldn't find some binary dependencies)
 RUN rosdep install -y --from-paths src --ignore-src --rosdistro rolling -r || true
