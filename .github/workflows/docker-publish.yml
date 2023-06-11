@@ -83,7 +83,7 @@ jobs:
         run: |
           pip3 install vcstool
           mkdir src
-          vcs import src < src.repos
+          vcs import src < src.repos --recursive
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
