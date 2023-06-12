@@ -63,6 +63,10 @@ repositories:
     type: git
     url: git@github.com:ros-sports/nao_lola.git
     version: rolling
+  nao_loopback:
+    type: git
+    url: git@github.com:ijnek/nao_loopback.git
+    version: rolling
   nao_phase_provider:
     type: git
     url: git@github.com:ijnek/nao_phase_provider
