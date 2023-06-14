@@ -95,6 +95,14 @@ repositories:
     type: git
     url: git@github.com:ijnek/ros2_boldbot.git
     version: rolling
+  ros2_cm730:
+    type: git
+    url: https://gitlab.com/boldhearts/ros2_cm730.git
+    version: master
+  ros2_template_repo:
+    type: git
+    url: git@github.com:ijnek/ros2_template_repo.git
+    version: rolling
   ros_image_to_qimage:
     type: git
     url: git@github.com:ros-sports/ros_image_to_qimage.git
@@ -130,6 +138,14 @@ repositories:
   soccer_visualization:
     type: git
     url: git@github.com:ijnek/soccer_visualization
+    version: rolling
+  sole_poses_ims:
+    type: git
+    url: git@github.com:ijnek/sole_poses_ims.git
+    version: rolling
+  team_ijnek:
+    type: git
+    url: git@github.com:ijnek/team_ijnek
     version: rolling
   vision_msgs_layers:
     type: git
