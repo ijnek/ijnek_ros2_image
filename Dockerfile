@@ -62,6 +62,9 @@ RUN sudo apt install -y python3-pip wget lsb-release gnupg curl && \
     colcon build --merge-install && \
     echo "source ~/gazebo_garden_ws/install/setup.bash" >> ~/.bashrc
 
+# Install jstest-gtk (to test xbox controller)
+RUN apt install -y jstest-gtk
+
 # Rosdep update
 RUN rosdep update
 
