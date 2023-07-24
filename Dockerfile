@@ -63,7 +63,7 @@ RUN cd GameController && ant
 #     echo "source ~/gazebo_garden_ws/install/setup.bash" >> ~/.bashrc
 
 # Install jstest-gtk (to test xbox controller)
-RUN apt install -y jstest-gtk
+RUN sudo apt install -y jstest-gtk
 
 # Rosdep update
 RUN rosdep update
