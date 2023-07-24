@@ -45,22 +45,22 @@ RUN git clone https://github.com/RoboCup-SPL/GameController.git
 RUN cd GameController && ant
 
 # Source Install Gazebo Garden (https://gazebosim.org/docs/garden/install_ubuntu_src)
-RUN sudo apt install -y python3-pip wget lsb-release gnupg curl && \
-    sudo sh -c 'echo "deb http://packages.ros.org/ros2/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros2-latest.list' && \
-    curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add - && \
-    sudo apt-get update && \
-    sudo apt-get install -y python3-vcstool python3-colcon-common-extensions && \
-    mkdir -p ~/gazebo_garden_ws/src && \
-    cd ~/gazebo_garden_ws/src && \
-    wget https://raw.githubusercontent.com/gazebo-tooling/gazebodistro/master/collection-garden.yaml && \
-    vcs import < collection-garden.yaml && \
-    sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null && \
-    sudo apt-get update && \
-    sudo apt -y install $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | sed '/gz\|sdf/d' | tr '\n' ' ') && \
-    cd ~/gazebo_garden_ws/ && \
-    colcon build --merge-install && \
-    echo "source ~/gazebo_garden_ws/install/setup.bash" >> ~/.bashrc
+# RUN sudo apt install -y python3-pip wget lsb-release gnupg curl && \
+#     sudo sh -c 'echo "deb http://packages.ros.org/ros2/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros2-latest.list' && \
+#     curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add - && \
+#     sudo apt-get update && \
+#     sudo apt-get install -y python3-vcstool python3-colcon-common-extensions && \
+#     mkdir -p ~/gazebo_garden_ws/src && \
+#     cd ~/gazebo_garden_ws/src && \
+#     wget https://raw.githubusercontent.com/gazebo-tooling/gazebodistro/master/collection-garden.yaml && \
+#     vcs import < collection-garden.yaml && \
+#     sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
+#     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null && \
+#     sudo apt-get update && \
+#     sudo apt -y install $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | sed '/gz\|sdf/d' | tr '\n' ' ') && \
+#     cd ~/gazebo_garden_ws/ && \
+#     colcon build --merge-install && \
+#     echo "source ~/gazebo_garden_ws/install/setup.bash" >> ~/.bashrc
 
 # Install jstest-gtk (to test xbox controller)
 RUN apt install -y jstest-gtk
