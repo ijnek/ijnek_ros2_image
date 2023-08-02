@@ -87,3 +87,6 @@ COPY --chown=$USERNAME:$USERNAME colcon/defaults.yaml /home/$USERNAME/.colcon/de
 # Set some ROS 2 logging env variables in ~/.bashrc
 RUN echo 'export RCUTILS_CONSOLE_OUTPUT_FORMAT="[{severity}] {file_name}:{line_number} - {message}"' >> ~/.bashrc
 RUN echo 'export RCUTILS_COLORIZED_OUTPUT=1' >> ~/.bashrc
+
+# Install dependencies required to make ROS 2 releases (https://docs.ros.org/en/iron/How-To-Guides/Releasing/First-Time-Release.html#install-dependencies)
+RUN sudo apt install -y python3-bloom python3-catkin-pkg
