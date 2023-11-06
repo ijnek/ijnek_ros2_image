@@ -35,6 +35,10 @@ repositories:
     type: git
     url: git@github.com:ros-perception/image_transport_plugins.git
     version: rolling
+  image_transport_plugins_test_env:
+    type: git
+    url: git@github.com:ijnek/image_transport_plugins_test_env
+    version: main
   ipm:
     type: git
     url: git@github.com:ros-sports/ipm.git
