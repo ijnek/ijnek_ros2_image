@@ -1,0 +1,15 @@
+{
+  "name": "ijnek_ros2_devcontainer",
+  "image": "ghcr.io/ijnek/ijnek_ros2_image:main",
+  "runArgs": [
+    "--privileged",
+    "--network=host",
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder}/ws,target=/ws,type=bind",
+  "workspaceFolder": "/ws",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind",
+    "source=${localWorkspaceFolder}/src.repos,target=/ws/src.repos,type=bind",
+  ],
+  "initializeCommand": "mkdir -p ws/src"
+}
