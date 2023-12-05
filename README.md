@@ -18,7 +18,7 @@ cd ijnek_ros2_image
 Then, hit `F1` to open the Command Palette, and select `Dev Containers: Rebuild Without Cache and Reopen in Container` to open the workspace in a container.
 
 ```bash
-vcs import ws/src < src.repos
+vcs import src < src.repos
 ```
 
 Next time you open the dev container, you can just hit `F1` and select `Dev Containers: Reopen in Container`.
