@@ -40,9 +40,23 @@ RUN cd SimSpark/rcssserver3d && mkdir build && cd build && cmake .. && make && s
 RUN echo -e '/usr/local/lib/simspark\n/usr/local/lib/rcssserver3d' | sudo tee /etc/ld.so.conf.d/spark.conf && sudo ldconfig
 
 # Install SPL GameController
-RUN sudo -E apt install -y ant openjdk-11-jdk
-RUN git clone https://github.com/RoboCup-SPL/GameController.git
-RUN cd GameController && ant
+RUN sudo -E apt install -y ant openjdk-11-jdk && \
+    git clone https://github.com/RoboCup-SPL/GameController.git && \
+    cd GameController && ant
+
+# Install SPL GameController3
+RUN sudo -E apt install -y libwebkit2gtk-4.0-dev build-essential curl wget file libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev && \
+    curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y && \
+    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && \
+    sudo -E apt install -y nodejs && \
+    sudo -E apt install -y libclang-dev && \
+    git clone https://github.com/RoboCup-SPL/GameController3.git && \
+    cd GameController3/frontend && \
+    npm ci && \
+    npm run build && \
+    cd .. && \
+    . $HOME/.cargo/env && \
+    cargo build
 
 # Install Gazebo Fortress (https://gazebosim.org/docs/fortress/install_ubuntu)
 RUN sudo apt update && \
