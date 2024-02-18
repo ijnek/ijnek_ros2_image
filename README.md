@@ -4,7 +4,8 @@ This repository stores a Dockerfile (and an action to publish it), to clone all 
 
 * SimSpark (RCSSServer3d)
 * Webots (+ Webots Lola Controller)
-* SPL GameController
+* SPL GameController (Deprecated GameController)
+* SPL GameController3 (New GameController)
 
 **WARNING: THIS IS NOT FOR PUBLIC USAGE, DO NOT USE**
 
