@@ -92,5 +92,8 @@ COPY --chown=$USERNAME:$USERNAME colcon/defaults.yaml /home/$USERNAME/.colcon/de
 RUN echo 'export RCUTILS_CONSOLE_OUTPUT_FORMAT="[{severity}] {file_name}:{line_number} - {message}"' >> ~/.bashrc
 RUN echo 'export RCUTILS_COLORIZED_OUTPUT=1' >> ~/.bashrc
 
+# Set alias for GameController3
+RUN echo 'alias gc3="~/GameController3/target/debug/game_controller_app"' >> ~/.bashrc
+
 # Install dependencies required to make ROS 2 releases (https://docs.ros.org/en/iron/How-To-Guides/Releasing/First-Time-Release.html#install-dependencies)
 RUN sudo apt install -y python3-bloom python3-catkin-pkg
