@@ -86,7 +86,7 @@ repositories:
   r2r_spl:
     type: git
     url: git@github.com:ros-sports/r2r_spl.git
-    version: dev
+    version: rolling
   rcss3d_agent:
     type: git
     url: git@github.com:ros-sports/rcss3d_agent.git
