@@ -87,6 +87,10 @@ repositories:
     type: git
     url: git@github.com:ijnek/naosoccer_visualization
     version: rolling
+  nested_services_rclcpp_demo:
+    type: git
+    url: git@github.com:ijnek/nested_services_rclcpp_demo.git
+    version: main
   r2r_spl:
     type: git
     url: git@github.com:ros-sports/r2r_spl.git
