@@ -178,4 +178,4 @@ repositories:
   zbar_ros:
     type: git
     url: git@github.com:ros-drivers/zbar_ros.git
-    version: ros2
+    version: rolling
