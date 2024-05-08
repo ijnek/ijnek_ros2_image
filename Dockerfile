@@ -1,4 +1,4 @@
-FROM osrf/ros:rolling-desktop-full
+FROM osrf/ros:jazzy-desktop-full
 
 # Disable interactive frontend
 # NOTE: for this to take effect when using "sudo" apt install, we need the -E flag to preserve the environment variable inside the sudo command
