@@ -28,38 +28,38 @@ RUN sudo -E apt install webots -y
 RUN git clone https://github.com/Bembelbots/WebotsLoLaController.git
 
 # Install SimSpark (https://gitlab.com/robocup-sim/SimSpark/-/wikis/Installation-on-Linux#build-from-source)
-RUN sudo -E apt install -y g++ git make cmake libfreetype6-dev libode-dev libsdl1.2-dev ruby ruby-dev libdevil-dev libboost-dev libboost-thread-dev libboost-regex-dev libboost-system-dev qtbase5-dev qtchooser qt5-qmake
-RUN git clone https://gitlab.com/robocup-sim/SimSpark.git
-RUN cd SimSpark/spark && mkdir build && cd build && cmake .. && make && sudo make install && sudo ldconfig
-RUN cd SimSpark/rcssserver3d && mkdir build && cd build && cmake .. && make && sudo make install && sudo ldconfig
-RUN echo -e '/usr/local/lib/simspark\n/usr/local/lib/rcssserver3d' | sudo tee /etc/ld.so.conf.d/spark.conf && sudo ldconfig
+# RUN sudo -E apt install -y g++ git make cmake libfreetype6-dev libode-dev libsdl1.2-dev ruby ruby-dev libdevil-dev libboost-dev libboost-thread-dev libboost-regex-dev libboost-system-dev qtbase5-dev qtchooser qt5-qmake
+# RUN git clone https://gitlab.com/robocup-sim/SimSpark.git
+# RUN cd SimSpark/spark && mkdir build && cd build && cmake .. && make && sudo make install && sudo ldconfig
+# RUN cd SimSpark/rcssserver3d && mkdir build && cd build && cmake .. && make && sudo make install && sudo ldconfig
+# RUN echo -e '/usr/local/lib/simspark\n/usr/local/lib/rcssserver3d' | sudo tee /etc/ld.so.conf.d/spark.conf && sudo ldconfig
 
 # Install SPL GameController
 RUN sudo -E apt install -y ant openjdk-11-jdk && \
     git clone https://github.com/RoboCup-SPL/GameController.git && \
     cd GameController && ant
 
-# Install SPL GameController3
-RUN sudo -E apt install -y libwebkit2gtk-4.0-dev build-essential curl wget file libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev && \
-    curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y && \
-    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && \
-    sudo -E apt install -y nodejs && \
-    sudo -E apt install -y libclang-dev && \
-    git clone https://github.com/RoboCup-SPL/GameController3.git && \
-    cd GameController3/frontend && \
-    npm ci && \
-    npm run build && \
-    cd .. && \
-    . $HOME/.cargo/env && \
-    cargo build
+# # Install SPL GameController3
+# RUN sudo -E apt install -y libwebkit2gtk-4.1-dev build-essential curl wget file libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev && \
+#     curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y && \
+#     curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && \
+#     sudo -E apt install -y nodejs && \
+#     sudo -E apt install -y libclang-dev && \
+#     git clone https://github.com/RoboCup-SPL/GameController3.git && \
+#     cd GameController3/frontend && \
+#     npm ci && \
+#     npm run build && \
+#     cd .. && \
+#     . $HOME/.cargo/env && \
+#     cargo build
 
-# Install Gazebo Fortress (https://gazebosim.org/docs/fortress/install_ubuntu)
-RUN sudo apt update && \
-    sudo apt install -y lsb-release wget gnupg && \
-    sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null && \
-    sudo apt update && \
-    sudo apt install -y ignition-fortress
+# Install Gazebo Harmonic (https://gazebosim.org/docs/harmonic/install_ubuntu)
+# RUN sudo apt update && \
+#     sudo apt install -y lsb-release wget gnupg && \
+#     sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
+#     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null && \
+#     sudo apt update && \
+#     sudo apt install gz-harmonic
 
 # Install jstest-gtk (to test xbox controller)
 RUN sudo apt install -y jstest-gtk
