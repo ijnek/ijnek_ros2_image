@@ -10,6 +10,7 @@
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind",
     "source=${localWorkspaceFolder}/src.repos,target=/ws/src.repos,type=bind",
+    "source=/dev/input,target=/dev/input,type=bind", // for joystick
   ],
   "initializeCommand": "mkdir -p ws/src"
 }
