@@ -95,3 +95,6 @@ RUN echo 'alias gc3="~/GameController3/target/debug/game_controller_app"' >> ~/.
 
 # Install dependencies required to make ROS 2 releases (https://docs.ros.org/en/iron/How-To-Guides/Releasing/First-Time-Release.html#install-dependencies)
 RUN sudo apt install -y python3-bloom python3-catkin-pkg
+
+# Install bash completion
+RUN sudo apt install -y bash-completion
