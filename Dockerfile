@@ -16,6 +16,9 @@ USER $USERNAME
 # Change directory to user home
 WORKDIR /home/$USERNAME
 
+# Upgrade all packages
+RUN sudo apt update && sudo apt upgrade -y
+
 # Install Webots
 # We install keyboard-configuration first, with DEBIAN_FRONTEND disabled because installing keyboard-configuration can lock up the docker build
 RUN sudo -E apt install -y wget software-properties-common
