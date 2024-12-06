@@ -92,6 +92,13 @@ The `ws` directory is mounted into the dev container, so even if you rebuild the
 | | theora_image_transport | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Hbin_uJ64__theora_image_transport__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Hbin_uJ64__theora_image_transport__ubuntu_jammy_amd64__binary) | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jbin_uN64__theora_image_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Jbin_uN64__theora_image_transport__ubuntu_noble_amd64__binary) | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rbin_uN64__theora_image_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Rbin_uN64__theora_image_transport__ubuntu_noble_amd64__binary) |
 | | zstd_image_transport | Unavailable | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jbin_uN64__zstd_image_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Jbin_uN64__zstd_image_transport__ubuntu_noble_amd64__binary) | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rbin_uN64__zstd_image_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Rbin_uN64__zstd_image_transport__ubuntu_noble_amd64__binary) |
 
+## ROS Drivers
+
+| Repository | Package | Humble Binary | Jazzy Binary | Rolling Binary |
+|:---:|:---:|:---:|:---:|:---:|
+| [zbar_ros](https://github.com/ros-drivers/zbar_ros) | zbar_ros | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Hbin_uJ64__zbar_ros__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Hbin_uJ64__zbar_ros__ubuntu_jammy_amd64__binary) | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jbin_uN64__zbar_ros__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Jbin_uN64__zbar_ros__ubuntu_noble_amd64__binary) | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rbin_uN64__zbar_ros__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Rbin_uN64__zbar_ros__ubuntu_noble_amd64__binary) |
+| | zbar_ros_interfaces | Unavailable | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jbin_uN64__zbar_ros_interfaces__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Jbin_uN64__zbar_ros_interfaces__ubuntu_noble_amd64__binary) | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rbin_uN64__zbar_ros_interfaces__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Rbin_uN64__zbar_ros_interfaces__ubuntu_noble_amd64__binary) |
+
 
 ## Dynamixel Community
 
