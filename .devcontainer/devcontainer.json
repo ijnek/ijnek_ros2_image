@@ -3,14 +3,12 @@
   "image": "ghcr.io/ijnek/ijnek_ros2_image:main",
   "runArgs": [
     "--privileged",
-    "--network=host",
+    "--network=host"
   ],
-  "workspaceMount": "source=${localWorkspaceFolder}/ws,target=/ws,type=bind",
-  "workspaceFolder": "/ws",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/${localWorkspaceFolderBasename}",
   "mounts": [
-    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind",
-    "source=${localWorkspaceFolder}/src.repos,target=/ws/src.repos,type=bind",
-    "source=/dev/input,target=/dev/input,type=bind", // for joystick
-  ],
-  "initializeCommand": "mkdir -p ws/src"
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/ubuntu/.bash_history,type=bind",
+    "source=/dev/input,target=/dev/input,type=bind"
+  ]
 }
