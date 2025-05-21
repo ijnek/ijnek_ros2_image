@@ -1,0 +1,8 @@
+{
+    "build": {
+        "symlink-install": true,
+        "cmake-args": [
+          "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+        ],
+    }
+}

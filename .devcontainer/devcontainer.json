@@ -1,6 +1,6 @@
 {
   "name": "ijnek_ros2_devcontainer",
-  "image": "ghcr.io/ijnek/ijnek_ros2_image:main",
+  "dockerFile": "Dockerfile",
   "runArgs": [
     "--privileged",
     "--network=host"
